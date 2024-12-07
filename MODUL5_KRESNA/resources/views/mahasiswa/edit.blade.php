@@ -47,8 +47,8 @@
                 <div class="form-group">
                   <label for="dosen_id">Dosen</label>
                   <select class="form-control @error('dosen_id') is-invalid @enderror" name="dosen_id" id="dosen_id">
-                    @foreach($dosens as $dosen)
-                      <option value="{{ $dosen->id }}" {{ $dosen->id == $mahasiswa->dosen_id ? 'selected' : '' }}>{{ $dosen->nama_dosen }}</option>
+                    @foreach($dosen as $data)
+                      <option value="{{ $data->id }}" {{ $data->id == $mahasiswa->dosen_id ? 'selected' : '' }}>{{ $data->nama_dosen }}</option>
                     @endforeach
                   </select>
                   @error('dosen_id')

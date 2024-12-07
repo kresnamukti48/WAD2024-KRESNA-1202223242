@@ -58,7 +58,8 @@ class MahasiswaController extends Controller
     public function edit(string $id)
     {
         $mahasiswa = Mahasiswa::findorFail($id);
-        return view('mahasiswa.edit', compact('mahasiswa'));
+        $dosen = Dosen::all();
+        return view('mahasiswa.edit', compact('mahasiswa', 'dosen'));
     }
 
     /**
